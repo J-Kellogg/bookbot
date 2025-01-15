@@ -20,7 +20,6 @@ def character_count(book_text):
                 letters[char] += 1
             else:
                 letters[char] = 1
-    #print(f"This is the current state of the letter list: {letters}")
     return letters
 
 def create_letter_list(letter_dict):
@@ -35,7 +34,6 @@ def create_report(book_text, book):
     print(f"--- Begin report of {book} ---")
     print(f"{word_count(book_text)} words found in the document")
     print()
-    # implement dictionary creation, sorting and printing here
     letter_list = create_letter_list(character_count(book_text))
     letter_list.sort(reverse=True, key=sort_by_count)
     for letter in letter_list:
